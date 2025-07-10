@@ -1,0 +1,42 @@
+/* Frosted-glass card effect */
+.card {
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+
+/* Dark-mode override for card */
+.dark .card {
+  background-color: rgba(31, 41, 55, 0.6);  /* bg-gray-800 @ 60% */
+  color: #f3f4f6;                           /* text-gray-100 */
+}
+
+/* Zebra stripes */
+.table-zebra tbody tr:nth-child(odd) {
+  background-color: #f9fafb;    /* gray-50 */
+}
+.dark .table-zebra tbody tr:nth-child(odd) {
+  background-color: #374151;    /* gray-700 */
+}
+
+/* Hover state */
+.table-zebra tbody tr:hover {
+  background-color: #eff6ff;    /* blue-50 */
+}
+.dark .table-zebra tbody tr:hover {
+  background-color: rgba(59, 130, 246, 0.25);  /* blue-600 @ 25% */
+  transition: background-color 0.2s;
+}
+
+/* Slick scrollbar (optional) */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #3b82f6; /* blue-500 */
+  border-radius: 9999px;
+}
